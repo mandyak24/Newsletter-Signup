@@ -1,6 +1,6 @@
 const express=require('express');
 const bodyParser = require('body-parser');
-// const request=require('request');
+const request=require('request');
 const https=require('https');
 
 
@@ -48,7 +48,7 @@ app.post("/",function(req,res){
             console.log(JSON.parse(data));
         });
     });
-    //request.write(jsonData);
+    request.write(jsonData);
     
     request.end();
 
